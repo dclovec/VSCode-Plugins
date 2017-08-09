@@ -14,3 +14,9 @@ plugins of vs code
 
     基本开发够用了。后续视情况添加其他功能。
 
+### 1、apicloud-snippets
+    Snippets for apicloud dev. Copy from official repo and package it.
+
+    See detail from apicloud official readme.md(https://github.com/apicloudcom/vscode-snippets).
+
+    简单从官方提示库复制过来，打包。可直接安装vsix文件。
