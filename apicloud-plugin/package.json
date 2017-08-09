@@ -1,0 +1,118 @@
+{
+    "name": "apicloud-plugin",
+    "displayName": "apicloud-plugin",
+    "description": "plugin for apicloud develop",
+    "version": "0.0.1",
+    "publisher": "robin",
+    "engines": {
+        "vscode": "^1.14.0"
+    },
+    "categories": [
+        "Other"
+    ],
+    "activationEvents": [
+        "onCommand:extension.startWifi",
+        "onCommand:extension.stopWifi",
+        "onCommand:extension.showWifiInfo",
+        "onCommand:extension.addSyncByWifi",
+        "onCommand:extension.allSyncByWifi"
+    ],
+    "main": "./extension",
+    "contributes": {
+        "commands": [
+            {
+                "command": "extension.startWifi",
+                "title": "apicloud open : 开启wifi服务"
+            },
+            {
+                "command": "extension.stopWifi",
+                "title": "apicloud close : 关闭wifi服务"
+            },
+            {
+                "command": "extension.showWifiInfo",
+                "title": "apicloud show : 显示wifi服务器信息"
+            },
+            {
+                "command": "extension.addSyncByWifi",
+                "title": "apicloud add : 增量同步"
+            },
+            {
+                "command": "extension.allSyncByWifi",
+                "title": "apicloud all : 全量同步"
+            },
+            {
+                "command": "extension.modifyWifiPort",
+                "title": "apicloud modify : 修改端口号"
+            }
+        ],
+        "menus": {
+            "explorer/context": [
+                {
+                    "command": "extension.startWifi",
+                    "group": "navigation"
+                },
+                {
+                    "command": "extension.stopWifi",
+                    "group": "navigation"
+                },
+                {
+                    "command": "extension.showWifiInfo",
+                    "group": "navigation"
+                },
+                {
+                    "command": "extension.addSyncByWifi",
+                    "group": "navigation"
+                },
+                {
+                    "command": "extension.allSyncByWifi",
+                    "group": "navigation"
+                },
+                {
+                    "command": "extension.modifyWifiPort",
+                    "group": "navigation"
+                }
+            ],
+            "editor/context": [
+                {
+                    "command": "extension.startWifi",
+                    "group": "navigation"
+                },
+                {
+                    "command": "extension.stopWifi",
+                    "group": "navigation"
+                },
+                {
+                    "command": "extension.showWifiInfo",
+                    "group": "navigation"
+                },
+                {
+                    "command": "extension.addSyncByWifi",
+                    "group": "navigation"
+                },
+                {
+                    "command": "extension.allSyncByWifi",
+                    "group": "navigation"
+                },
+                {
+                    "command": "extension.modifyWifiPort",
+                    "group": "navigation"
+                }
+            ]
+        }
+    },
+    "scripts": {
+        "postinstall": "node ./node_modules/vscode/bin/install",
+        "test": "node ./node_modules/vscode/bin/test"
+    },
+    "devDependencies": {
+        "typescript": "^2.0.3",
+        "vscode": "^1.0.0",
+        "mocha": "^2.3.3",
+        "eslint": "^3.6.0",
+        "@types/node": "^6.0.40",
+        "@types/mocha": "^2.2.32"
+    },
+    "dependencies": {
+        "apicloud-tools-core": "^0.1.0"
+    }
+}
